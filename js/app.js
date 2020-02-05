@@ -160,7 +160,9 @@ function drawFishingLine() {
 function decreaseLineLength(currentX, currentY, endX, endY) {
     let xDecrementVal = (Math.abs(currentX - endX)) / 10;
     let yDecrementVal = (Math.abs(currentY - endY)) / 10;
-    if (currentY > endY) {
+    if (currentY < 45) {
+        hookIsSet = false;
+    } else {
         if (currentX < endX) {
             fishingLine.end_x += xDecrementVal;
             fishingLine.end_y -= yDecrementVal;
@@ -168,9 +170,6 @@ function decreaseLineLength(currentX, currentY, endX, endY) {
             fishingLine.end_x -= xDecrementVal;
             fishingLine.end_y -= yDecrementVal;
         }
-    } else {
-        console.log('AGAIN')
-        hookIsSet = false;
     }
 }
 
@@ -181,8 +180,8 @@ function setHookStartPosition(e) {
     let mouseY = e.offsetY;
     fishingLine.end_x = mouseX;
     fishingLine.end_y = mouseY;
-    console.log(fishingLine.end_x);
-    console.log(fishingLine.end_y);
+    // console.log(fishingLine.end_x);
+    // console.log(fishingLine.end_y);
     // game.removeEventListener('mousemove', createFishingLine);
     // game.removeEventListener('click', setHookStartPosition);
     hookIsSet = true;
@@ -217,8 +216,6 @@ function gameLoop() {
     // Clear the canvas
     ctx.clearRect(0, 0, game.width, game.height);
     
-    console.log("Fishing 'n such!");
-    
     fishArr.forEach((fish, i) => {
         fishArr[i].update();
         fish.render();
@@ -227,17 +224,16 @@ function gameLoop() {
     fisherwoman.render();
     
     if (fishingLine && fishingLine.end_y > 50) {
-        console.log('farts')
+        
         drawFishingLine();
     }
 
-    // check if game is over
+    // check if line has been reeled back in
     if (!hookIsSet) {
         console.log("Helllllllo");
         clearInterval(reelDemFish);
     }
 
-    
     animationRequest = requestAnimationFrame(gameLoop);
     
 }
