@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Aclonica|Freckle+Face|Frijole|Luckiest+Guy|Rock+Salt|Shojumaru|Slackey|Vidaloka|Wendy+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shojumaru&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Fishing 'n Such</title>
@@ -12,19 +12,24 @@
         <h1>Fishing 'n Such</h1>
         <!-- <h4>Instructions</h4> -->
     </header>
-
-    <div id="game-layout">
-        <main>
-            <canvas id="game"><!-- play it, a game --></canvas>
-        </main>
-        <aside id="bottom-left"><h3>00:00:00</h3></aside>
-        <aside id="bottom-right"><h3>Points: 0</h3></aside>
+    <div class="app-page">
+        <div id="game-layout">
+            <main>
+                <canvas id="game"><!-- play it, a game --></canvas>
+            </main>
+            <aside id="bottom-left"><h3>00:00:30</h3></aside>
+            <aside id="bottom-right"><h3>Points: 0</h3></aside>
+        </div>
+        <aside class="instructions"><h2>Instructions</h2>
+            <h3>Welcome to Fishing 'n Such!</h3> 
+            <p> Move your cursor around the sceen to see your fishing line, and click to set the hook! You need 30 or more points when the timer hits 0 in order to win! The bigger the fish, the greater the points. But watch out for any unsavory creatures! Click the restart button to begin again. Happy fishing!!</h3>
+        </aside>
     </div>
-    <button id="start-button">START GAME</button>
+    <button type="button" id="restart-button">RESTART GAME</button>
     
-    <footer>
+    <!-- <footer>
         <button>CAST!</button>
-    </footer>
+    </footer> -->
 
     <script src="js/app.js"></script>
 </body>
