@@ -35,6 +35,6 @@ I successfully implented my stretch goal of making the game visually appealing a
 ### Technologies:
 HTML5 Canvas, Css, and javascript
 
-![Wireframes](../img/mrkp1.jpg);
-![Wireframes](../img/mrkp2.jpg);
-![Wireframes](../img/mrkp3.jpg);
+![Wireframes](img/mrkp1.jpg);
+![Wireframes](img/mrkp2.jpg);
+![Wireframes](img/mrkp3.jpg);
