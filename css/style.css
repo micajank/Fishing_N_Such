@@ -43,7 +43,9 @@ h1 {
 
 
 canvas {
-    background-color: rgb(20, 170, 216); 
+    background-image: url("../img/canvas-background.jpg"); 
+    background-size: cover;
+    background-position: top;
     width: 100%;
     height: 400px;
 }
