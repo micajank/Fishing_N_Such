@@ -220,7 +220,7 @@ function createFishingLine(e) {
             
         }
     } 
-   hook = new Fisher(fishingLine.end_x, fishingLine.end_y, "black", 15, 20, "img/hook.png");
+   hook = new Fisher(fishingLine.end_x, fishingLine.end_y, "black", 10, 15, "img/hook.png");
 }
 
 // draw the fishing line
@@ -280,16 +280,16 @@ function decreaseLineLength(currentX, currentY, endX, endY) {
             // Render hook to follow line
             hook.render();
             // Caught fish set to same coords as hook and line end, then rendered to follow
-            caughtFish.y = fishingLine.end_y - 7;
-            caughtFish.x = fishingLine.end_x - 7;
+            caughtFish.y = fishingLine.end_y - 2;
+            caughtFish.x = fishingLine.end_x - 2;
             caughtFish.render();
         } else {
             fishingLine.end_x -= xDecrementVal;
             fishingLine.end_y -= yDecrementVal;
             hook = new Fisher(fishingLine.end_x, fishingLine.end_y, "black", 15, 20, "img/hook.png");
             hook.render();
-            caughtFish.y = fishingLine.end_y - 7;
-            caughtFish.x = fishingLine.end_x - 7;
+            caughtFish.y = fishingLine.end_y - 2;
+            caughtFish.x = fishingLine.end_x - 2;
             caughtFish.render();
         }
     }

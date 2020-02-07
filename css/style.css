@@ -43,7 +43,8 @@ h1 {
 
 
 canvas {
-    background-image: url("../img/canvas-background.jpg"); 
+    /* background-image: url("../img/canvas-back-3.jpg");  */
+    background-image: url("../img/homemade-background.png");
     background-size: cover;
     background-position: top;
     width: 100%;
